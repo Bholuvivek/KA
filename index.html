@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">      
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
+    <title>Kalam Academy</title>
+</head>
+<body>
+    <div>
+
+        <table id="example" class="display" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Lead ID</th>
+                    <th>Name</th>
+                    <th>Mobile</th>
+                    <th>Alternate Mobile</th>
+                    <th>Whatsapp</th>
+                    <th>Email</th>
+                    <th>Interested In</th>
+                    <th>Source</th>
+                    <th>Status</th>
+                    <th>Last DOR</th>
+                    <th>Summary Note</th>
+                    <th>Caller</th>
+                    <th>State</th>
+                    <th>City</th>    
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data rows -->
+            </tbody>
+        </table>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="assets/js/script.js"></script>
+    <script>
+	$(document).ready(function(){
+   $("#example").on("keyup",function(){
+    var value = $(this).val().toLowerCase();
+    $("#example tr").filter(function(){
+   $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+
+    });
+
+   });
+
+	});
+  </script>
+
+</body>
+</html>
